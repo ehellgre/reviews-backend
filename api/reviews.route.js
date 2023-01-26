@@ -1,6 +1,8 @@
 import express from "express"
 import ReviewsCtrl from "./reviews.controller.js"
 
+console.log(req.body)
+
 const router = express.Router()
 
 router.route("/").get((req, res) => res.send("hello world"))

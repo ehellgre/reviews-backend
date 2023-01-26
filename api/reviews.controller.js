@@ -4,12 +4,12 @@ export default class ReviewsCtrl {
 
     static async apiPostReview(req, res, next) {
         try {
-            const movieId = req.body.movieId
+            let movieId = parseInt(req.body.movieId)
             const review = req.body.review
             const user = req.body.user
 
             const reviewResponse = await ReviewsDAO.addReview(movieId, user, review)
-            res.json({ status: "success" })
+            res.json({ status: "plö" })
 
         } catch (e) {
             res.status(500).json({ error: e.message })
